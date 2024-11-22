@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(217, 217, 217);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+h1, h2 {
+    color: rgb(94, 0, 128);
+    text-align: center;
+    line-height: 1.5em;
+}
+
+nav {
+    background-color: rgb(94, 0, 128);
+    padding: 15px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    color:rgb(226, 43, 174);
+}
+
+main {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+main p {
+    text-align: justify;
+}
+
+button {
+    width: 50%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(94, 0, 128);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+#botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: rgb(226, 43, 174);
+}
+
+#imagem {
+    width: 50%;
+    border-radius: 2%;
+}
+
+#cabecalho {
+    display: flex;
+    padding: 20px;
+    background-color: rgb(94, 0, 128);
+}
+
+#cabecalho nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#logo {
+    width: 50px;
+    z-index: 999;
+    position: absolute;
+    margin: 20px;
+}
+
