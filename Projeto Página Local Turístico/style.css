@@ -78,6 +78,7 @@ main {
     border-radius: 10px;
     width: 100%;
     height: 230px;
+    object-fit: cover;
 }
 
 .pontos h2 {
