@@ -54,9 +54,15 @@ header img {
     height: 176px;
     border-radius: 50%;
 }
+#about-me {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
 
 #about-me h2 {
     font-size: 32px;
+    color: var(--text-color-primary);
 }
 
 #about-me h2:hover {
@@ -65,8 +71,8 @@ header img {
 }
 
 #about-me p {
-    font-size: 14px;
-    color: #6C6C6C;
+    font: var(--text-md);
+    color: var(--text-color-secondary);
     line-height: 170%;
 }
 
@@ -97,7 +103,8 @@ header img {
 main {
     background-color: #FFFFFF;
     padding: 24px 32px;
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 24px;
@@ -106,8 +113,8 @@ main {
 }
 
 main img {
-    width: 400px;
-    height: 400px;
+    width: 286px;
+    height: 286px;
     border-radius: 5px;
 }
 
@@ -120,8 +127,8 @@ footer {
 }
 
 footer p, footer a {
-    font-size: 14px;
-    color: #6C6C6C;
+    font: var(--font-md);
+    color: var(--text-color-secondary);
     line-height: 150%;
 }
 
