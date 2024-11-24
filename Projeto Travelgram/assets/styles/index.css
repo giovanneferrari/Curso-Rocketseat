@@ -1,18 +1,10 @@
-:root {
-    font-family: "Poppins", sans-serif;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import url(./global.css);
 
 header {
     display: flex;
     justify-content: space-between;
     height: 80px;
-    background-color: #F5F5F5;
+    background-color: var(--surface-color);
     padding: 20px 32px;
 }
 
@@ -22,22 +14,16 @@ header img {
 
 #search {
     width: 325px;
-    height: 40px;;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
 #search img {
     width: 32px;
     height: 32px;
-}
-
-#search p {
-    color: #6C6C6C;
-    font-size: 16px;
-    line-height: 170%;
 }
 
 #profile-pic {
@@ -51,7 +37,7 @@ header img {
     align-items: center;
     justify-content: space-between;
     height: 240px;
-    background-color: #F5F5F5;
+    background-color: var(--surface-color);
     padding: 32px;
 }
 
@@ -153,14 +139,3 @@ footer a:hover {
     color:#EF5F4C;
 }
 
-#explorar:hover {
-text-decoration: underline;
-color: #EF5F4C;
-cursor: pointer;
-
-}
-
-#lupa:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
