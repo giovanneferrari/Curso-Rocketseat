@@ -1,0 +1,38 @@
+.navbar-primary {
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+#menu-button, #search-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.menu-heading {
+    font: var(--font-heading2);
+    color: var(--text-color-primary);
+}
+
+#logo {
+    font-family: "Archivo", sans-serif;
+    font-size: 24px;
+    color: var(--brand-color-light);
+    font-weight: 900;
+}
+
+.navbar-secondary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid var(--stroke-color);
+    border-bottom: 1px solid var(--stroke-color);
+    color: var(--text-color-secondary);
+    font: var(--font-span);
+    list-style-type: none;
+}
