@@ -27,6 +27,7 @@ aside {
 
 aside > img {
     width: 370px;
+    align-self: center;
 }
 
 #more-news {

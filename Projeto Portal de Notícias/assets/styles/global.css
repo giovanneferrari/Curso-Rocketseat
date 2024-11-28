@@ -27,3 +27,26 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    display: flex;
+    background-color: var(--brand-color-light);
+    padding: 7px;
+    color: var(--text-color-primary);
+    font: var(--font-span);
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    max-width: 1280px;
+}
