@@ -1,16 +1,20 @@
 .navbar-primary {
     height: 72px;
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 0;
 }
 
 #menu-button, #search-button {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 8px;
+}
+
+#menu-button p:hover, #search-button p:hover {
+    color: var(--brand-color-light);
+    cursor: pointer;
 }
 
 .menu-heading {
@@ -26,9 +30,9 @@
 }
 
 .navbar-secondary {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 0;
     border-top: 1px solid var(--stroke-color);
     border-bottom: 1px solid var(--stroke-color);

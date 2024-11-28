@@ -26,6 +26,7 @@ body {
     padding-inline: 32px;
     display: flex;
     flex-direction: column;
+    max-width: 1280px;
 }
 
 a {
@@ -49,4 +50,9 @@ footer {
 
 main {
     max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    margin-top: 40px;
+    margin-bottom: 80px;
 }
