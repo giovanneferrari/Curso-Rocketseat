@@ -1,42 +1,40 @@
 .navbar-primary {
-    height: 72px;
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    padding: 20px 0;
-}
-
-#menu-button, #search-button {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-#menu-button p:hover, #search-button p:hover {
-    color: var(--brand-color-light);
-    cursor: pointer;
-}
-
-.menu-heading {
+    padding-block: 20px;
     font: var(--font-heading2);
     color: var(--text-color-primary);
+
+    #menu-button {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+
+    #logo {
+        margin: auto;
+        font-family: "Archivo", sans-serif;
+        font-size: 24px;
+        color: var(--brand-color-light);
+        font-weight: 900;
+    }
+
+    #search-button {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
 }
 
-#logo {
-    font-family: "Archivo", sans-serif;
-    font-size: 24px;
-    color: var(--brand-color-light);
-    font-weight: 900;
+.container {
+    max-width: 1280px;
+    padding-inline: 32px;
 }
 
 .navbar-secondary {
-    display: grid;
-    grid-auto-flow: column;
-    justify-content: space-between;
-    padding: 20px 0;
+    padding-block: 14px;
     border-top: 1px solid var(--stroke-color);
     border-bottom: 1px solid var(--stroke-color);
-    color: var(--text-color-secondary);
     font: var(--font-span);
     list-style-type: none;
+    justify-content: space-between;
 }

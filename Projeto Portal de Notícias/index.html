@@ -10,10 +10,10 @@
     <title>Portal de Notícias</title>
 </head>
 <body>
-    <header>
-        <div class="navbar-primary">
+    <header class="container">
+        <div class="navbar-primary grid grid-flow-col">
             <div id="menu-button">
-                <img src="./assets/icons/List.svg" alt="menu-button">
+                <img src="./assets/icons/List.svg" alt="menu icon">
                 <p class="menu-heading">Menu</p>
             </div>
             <p id="logo">TECH NEWS</p>
@@ -22,38 +22,47 @@
                 <img src="./assets/icons/MagnifyingGlass.svg" alt="search-button">
             </div>
         </div>
-        <nav class="navbar-secondary">
-            <li><a href="#">Inteligência Artificial</a></li>
-            <li><a href="#">Blockchain</a></li>
-            <li><a href="#">Hologramas</a></li>
-            <li><a href="#">Internet</a></li>
-            <li><a href="#">Vestíveis</a></li>
-            <li><a href="#">Realidade Aumentada</a></li>
-            <li><a href="#">Realidade Virtual</a></li>
+        <nav class="navbar-secondary grid grid-flow-col">
+            <a href="#">Inteligência Artificial</a>
+            <a href="#">Blockchain</a>
+            <a href="#">Hologramas</a>
+            <a href="#">Internet</a>
+            <a href="#">Vestíveis</a>
+            <a href="#">Realidade Aumentada</a>
+            <a href="#">Realidade Virtual</a>
         </nav>
     </header>
-    <main>
-        <section id="main-section">
-            <div class="image-container" id="main-article">
-                <p>ROBÓTICA</p>
-                <p>Robôs domésticos começam a ser adotados para tarefas diárias, prometendo mais conforto e eficiência nas residências.</p>
-            </div>
+    <main class="grid container">
+        <section id="main-section" class="grid grid-flow-col gap-16">
+
+            <figure id="main-article" class="image-container">
+                <img src="./assets/images/Image 01.png" alt="" class="image-container card">
+                <figcaption>
+                <span class="content-tag">robótica</span>
+                <h2 class="text-2xl">Robôs domésticos começam a ser adotados para tarefas diárias, prometendo mais conforto e eficiência nas residências.</h2>
+                </figcaption>
+            </figure>
+
             <div class="image-container" id="other-articles-one">
-                <p>HOLOGRAMAS</p>
+                <span class="content-tag">hologramas</span>
                 <p>Novo Smartphone Projetor 3D chega ao mercado, transformando a forma como vemos nossas telas!</p>
             </div>
+
             <div class="image-container" id="other-articles-two">
-                <p>INTERNET</p>
+                <span class="content-tag">internet</span>
                 <p>Tecnologia 6G chega às metrópoles brasileiras, prometendo revolucionar a forma como vivemos e nos comu...</p>                
             </div>
+
             <div class="image-container" id="other-articles-three">
                 <p>VESTÍVEIS</p>
                 <p>Empresa lança relógio inteligente capaz de monitorar a saúde mental, oferecendo insights valiosos para...</p>
             </div>
+
             <div class="image-container" id="other-articles-four">
                 <p>REALIDADE VIRTUAL</p>
                 <p>Escolas adotam a tecnologia VR para proporcionar experiências imersivas, transformando a aprendizagem...</p>               
             </div>
+
         </section>
         <section class="secondary-section">
             <div id="secondary-section-infos">
