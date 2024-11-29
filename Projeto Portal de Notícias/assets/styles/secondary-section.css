@@ -22,11 +22,6 @@
     gap: 4px;
 }
 
-#secondary-section-infos-arrow img:hover {
-    background-image: url(../icons/arrow-right-white.svg);
-    cursor: pointer;
-}
-
 #secondary-carroussel {
     display: flex;
     gap: 16px;
