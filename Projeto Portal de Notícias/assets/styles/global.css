@@ -26,10 +26,6 @@ body {
     font: var(--font);
     background-color: var(--bg-color);
     color: var(--text-color-primary);
-    /* padding-inline: 32px;
-    display: flex;
-    flex-direction: column;
-    max-width: 1280px; */
 }
 
 a {
@@ -38,7 +34,8 @@ a {
 }
 
 a:hover {
-    color: var(--brand-color-light)
+    color: var(--brand-color-light);
+    cursor: pointer;
 }
 
 h1, h2, h3 {
