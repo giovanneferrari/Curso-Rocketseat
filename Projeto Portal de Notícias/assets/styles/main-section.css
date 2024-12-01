@@ -1,6 +1,4 @@
 #main-section {
-    display: flex;
-    height: 416px;
     img {
         height: 100%;
         object-fit: cover;
@@ -10,9 +8,6 @@
 #main-article {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    width: auto;
-    gap: 8px;
     position: relative;
     overflow: hidden;
     
@@ -39,6 +34,34 @@
     }
 }
 
+#other-articles-one, #other-articles-two {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    
+        &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            transparent 0%,
+            #020617 100%
+        );
+    }
+
+    figcaption {
+        position: absolute;
+        bottom: 0;
+        padding: 12px;
+    }
+
+    h2 {
+        margin-top: 8px;
+    }
+}
+
 #main-article p:nth-child(2) {
 
     color: var(--text-color-primary);
@@ -53,63 +76,6 @@
     font: var(--font-heading1);
 }
 
-#other-articles-one {
-    grid-column: 3/4;
-    grid-row: 1/2;
-    background: url(../images/Image\ 02.png) no-repeat center center/cover;
-    padding: 12px;
+#other-articles {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 8px;
-}
-
-#other-articles-two {
-    grid-column: 4/5;
-    grid-row: 1/2;
-    background: url(../images/Image\ 03.png) no-repeat center center/cover;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 8px;
-    box-shadow: inset -0px 0px 140px 0px rgba(0, 0, 0, 0.5);
-}
-
-#other-articles-three {
-    grid-column: 3/4;
-    grid-row: 2/3;
-    background: url(../images/Image\ 04.png) no-repeat center center/cover;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 8px;
-    box-shadow: inset -0px 0px 140px 0px rgba(0, 0, 0, 0.5);
-}
-
-#other-articles-four {
-    grid-column: 4/5;
-    grid-row: 2/3;
-    background: url(../images/Image\ 05.png) no-repeat center center/cover;
-    padding: 12px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 8px;
-    box-shadow: inset -0px 0px 140px 0px rgba(0, 0, 0, 0.5);
-}
-
-#other-articles-one p:nth-child(1), #other-articles-two p:nth-child(1), #other-articles-three p:nth-child(1), #other-articles-four p:nth-child(1) {
-    background-color: var(--brand-color-dark);
-    color: var(--text-color-primary);
-    font: var(--font-label);
-    padding: 4px 8px;
-    border-radius: 4px;
-    width: fit-content;
-}
-
-#other-articles-one p:nth-child(2), #other-articles-two p:nth-child(2), #other-articles-three p:nth-child(2), #other-articles-four p:nth-child(2) {
-    color: var(--text-color-primary);
-    font: var(--font-heading3);
 }

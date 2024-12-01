@@ -74,12 +74,10 @@
 aside {
     display: flex;
     flex-direction: column;
-    gap: 32px;
 }
 
-aside > img {
-    width: 370px;
-    align-self: center;
+aside img {
+    margin-bottom: 32px;
 }
 
 #more-news {
@@ -139,4 +137,8 @@ aside > img {
 .aside-news-text h2 {
     color: var(--text-color-primary);
     font: var(--font-heading3);
+}
+
+aside > img {
+    border-radius: 5px;
 }
