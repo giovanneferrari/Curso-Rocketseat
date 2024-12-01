@@ -35,6 +35,7 @@
  align-items: flex-start;
  width: 292px;
  gap: 8px;
+ cursor: pointer;
 }
 
 .secondary-topic p:nth-child(1) {
