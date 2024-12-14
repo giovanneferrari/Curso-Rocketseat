@@ -4,6 +4,7 @@
 
 main {
     width: 50%;
+    background-color: var(--surface-color-primary);
 
     .title {
         display: flex;
@@ -49,28 +50,102 @@ main {
             color: var(--text-color-primary);
             }
 
-        .child-name, .child-age {
+        .child-name, .child-age, .child-gender, .child-medical-info, .child-birth-document {
             display: flex;
             flex-direction: column;
             gap: 4px;
 
-            h4 {
+            label {
                 font: var(--text-md);
                 color: var(--text-color-secondary);
             }
 
-            .child-name-box, .child-age-box {
+            .child-name-box, .child-age-box, #medical-info {
                 background-color: var(--surface-color-primary);
                 border: 1px solid var(--stroke-default);
                 padding: 12px 16px;
                 border-radius: 8px;
                 font: var(--text-lg);
                 color: var(--text-color-primary);
+                outline: none;
             }
 
-            .child-name-box:hover, .child-age-box:hover {
+            .child-age-box:focus, .child-name-box:focus, #medical-info:focus {
                 border: 1px solid var(--stroke-highlight);
-                cursor: pointer;
+                box-shadow: 0 0 5px var(--stroke-highlight);
+            }
+        }
+
+        .child-birth-document-box {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+            border: 2px dashed var(--stroke-default);
+            padding: 24px 16px;
+            border-radius: 8px;
+
+            p {
+                font: var( --text-lg);
+                color: var(--stroke-default);
+            }
+        }
+
+        .child-birth-document-box:hover {
+            cursor: pointer;
+            background-color: var(--surface-color-secondary);
+            border: 2px dashed var(--stroke-highlight);
+            transition: all 0.3s ease-in-out;
+
+            svg {
+                path {
+                    stroke: var(--brand-color-light);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+
+            p {
+                color: var(--text-color-tertiary);
+                transition: all 0.3s ease-in-out;
+            }
+
+        }
+    }
+
+    .address {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        h3 {
+            font: var(--text-lg-semi);
+            color: var(--text-color-primary);
+            }
+
+        .address-zip, .address-stress {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            label {
+                font: var(--text-md);
+                color: var(--text-color-secondary);
+            }
+
+            input {
+                background-color: var(--surface-color-primary);
+                border: 1px solid var(--stroke-default);
+                padding: 12px 16px;
+                border-radius: 8px;
+                font: var(--text-lg);
+                color: var(--text-color-primary);
+                outline: none;
+            }
+
+            input:focus {
+                border: 1px solid var(--stroke-highlight);
+                box-shadow: 0 0 5px var(--stroke-highlight);
             }
         }
     }
@@ -83,6 +158,8 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 32px;
+    position: fixed;
+    right: 0;
 
     div {
         gap: 8px;

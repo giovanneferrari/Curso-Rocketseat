@@ -48,3 +48,7 @@
     --text-sm: 12px/150% var(--font-family);
     --text: 16px/150% var(--font-family);
 }
+
+body {
+    background-color: var(--surface-color-secondary);
+}
