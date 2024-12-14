@@ -1,0 +1,108 @@
+.container {
+    width: 100%;
+}
+
+main {
+    width: 50%;
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        .title-button {
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            align-items: center;
+
+            p {
+                font: var(--text-lg);
+                color: var(--text-color-tertiary);
+            }
+        }
+
+        .title-infos {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            h1 {
+                font: var(--h2-var);
+                color: var(--text-color-primary);
+            }
+
+            p {
+                font: var(--text-lg);
+                color: var(--text-color-secondary);
+            }
+        }
+    }
+
+    .child-information {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        h3 {
+            font: var(--text-lg-semi);
+            color: var(--text-color-primary);
+            }
+
+        .child-name, .child-age {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+
+            h4 {
+                font: var(--text-md);
+                color: var(--text-color-secondary);
+            }
+
+            .child-name-box, .child-age-box {
+                background-color: var(--surface-color-primary);
+                border: 1px solid var(--stroke-default);
+                padding: 12px 16px;
+                border-radius: 8px;
+                font: var(--text-lg);
+                color: var(--text-color-primary);
+            }
+
+            .child-name-box:hover, .child-age-box:hover {
+                border: 1px solid var(--stroke-highlight);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+aside {
+    width: 50%;
+    background-color: var(--surface-color-secondary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    div {
+        gap: 8px;
+        flex-direction: column;
+
+        img {
+            width: 203px;
+        }
+
+        h1 {
+            font: var(--h0);
+
+            span {
+                color: var(--text-color-highlight);
+            }
+        }
+
+        p {
+            font: var(--text-lg);
+            color: var(--text-color-secondary);
+        }
+    }
+}

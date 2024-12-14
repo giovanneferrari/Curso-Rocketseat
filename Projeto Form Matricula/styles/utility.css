@@ -1,0 +1,15 @@
+.flex {
+    display: flex;
+}
+
+.direction-column {
+    flex-direction: column;
+}
+
+.padding-64 {
+    padding: 64px;
+}
+
+.gap-48 {
+    gap: 48px;
+}
