@@ -55,7 +55,7 @@
                             <path d="M17.4776 9.01106C17.485 9.01102 17.4925 9.01101 17.5 9.01101C19.9853 9.01101 22 11.0294 22 13.5193C22 15.8398 20.25 17.7508 18 18M17.4776 9.01106C17.4924 8.84606 17.5 8.67896 17.5 8.51009C17.5 5.46695 15.0376 3 12 3C9.12324 3 6.76233 5.21267 6.52042 8.03192M17.4776 9.01106C17.3753 10.1476 16.9286 11.1846 16.2428 12.0165M6.52042 8.03192C3.98398 8.27373 2 10.4139 2 13.0183C2 15.4417 3.71776 17.4632 6 17.9273M6.52042 8.03192C6.67826 8.01687 6.83823 8.00917 7 8.00917C8.12582 8.00917 9.16474 8.38194 10.0005 9.01101" stroke="var(--stroke-default)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             <path d="M12 13V21M12 13C11.2998 13 9.99153 14.9943 9.5 15.5M12 13C12.7002 13 14.0085 14.9943 14.5 15.5" stroke="var(--stroke-default)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>                            
-                        <input type="file" hidden>
+                        <input type="file">
                         <p>Clique aqui para selecionar arquivos</p>
                     </div>
                 </div>
@@ -66,9 +66,81 @@
                     <label>CEP</label>
                     <input type="number" placeholder="Digite seu cep">
                 </div>
-                <div class="address-stress">
-                    <label>Rua</label>
-                    <input type="text" value="Rua das Flores" disabled>
+                <div class="address-infos">
+                    <div id="address-street">
+                        <label>Rua</label>
+                        <input type="text" value="Rua das Flores" id="input-disabled" disabled>
+                    </div>
+                    <div id="address-number">
+                        <label>Número</label>
+                        <input type="number" value="123">
+                    </div>
+                </div>
+                <div class="city-infos">
+                    <div class="city">
+                        <label>Cidade</label>
+                        <input type="text" value="São Paulo" id="input-disabled" disabled>
+                    </div>
+                    <div class="city">
+                        <label>Estado</label>
+                        <input type="text" value="SP" id="input-disabled" disabled>
+                    </div>
+                </div>
+            </div>
+            <div class="parents-info">
+                <h3>Informações do responsável</h3>
+                <div class="parents-name">
+                    <label>Nome do responsável</label>
+                    <input type="text" placeholder="Digite seu nome completo">
+                    <p>Principal responsável legal e contato de emergência</p>
+                </div>
+                <div class="parents-number">
+                        <label>Telefone</label>
+                        <input type="number" placeholder="(11) 99999-9999">
+                </div>
+                <div class="parents-email">
+                    <label>e-mail</label>
+                    <input type="text" placeholder="Digite seu e-mail" required>
+                </div>
+            </div>
+            <div class="registration-options">
+                <h3>Opções de matrícula</h3>
+                <div class="part-time-options">
+                    <p>Selecione o turno de estudo</p>
+                    <div class="part-time-selection">
+                        <div id="morning">
+                            <div id="rounded-circle-selected">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87754 1.02038C10.1425 1.50493 9.96454 2.11257 9.47998 2.37756C8.10863 3.12752 6.82076 4.69753 5.83744 6.20323C5.35808 6.93725 4.97349 7.62066 4.70899 8.12036C4.577 8.36972 4.47558 8.57205 4.40788 8.7105C4.37404 8.77969 4.34867 8.83283 4.33216 8.8678L4.3141 8.90633L4.31015 8.91485L4.30965 8.91595C4.15515 9.25365 3.82609 9.4782 3.45528 9.49867C3.08436 9.51914 2.73266 9.33231 2.54197 9.0135C2.23126 8.49403 1.73753 8.01982 1.27997 7.65807C1.05765 7.4823 0.85753 7.34372 0.714718 7.25017C0.643589 7.20358 0.587438 7.16865 0.550786 7.14636C0.53248 7.13522 0.519105 7.12728 0.511229 7.12265L0.504429 7.11866C0.0249384 6.84496 -0.142031 6.23442 0.131511 5.75478C0.405118 5.27503 1.01583 5.10792 1.49558 5.38153L1.00017 6.25019C1.49558 5.38153 1.49539 5.38142 1.49558 5.38153L1.49729 5.3825L1.49959 5.38382L1.50594 5.38749L1.52544 5.39888C1.5414 5.40827 1.56318 5.42123 1.59018 5.43766C1.64416 5.47049 1.71925 5.5173 1.81063 5.57716C1.99281 5.6965 2.2427 5.86964 2.52037 6.08918C2.73257 6.25696 2.96985 6.45869 3.20939 6.69111C3.46624 6.22973 3.78717 5.68499 4.1629 5.10965C5.17959 3.55285 6.69171 1.62286 8.52036 0.622817C9.00492 0.357824 9.61255 0.535817 9.87754 1.02038Z" fill="#FFFFFF"/>
+                                    </svg>
+                            </div>
+                            <input type="radio" name="part-time" value="manha" checked hidden>
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M35 23C35 16.9249 30.0752 12 24 12C18.2465 12 13.5247 16.4172 13.0408 22.0454C7.96796 22.5282 4 26.8006 4 32C4 37.5228 8.47716 42 14 42H35C39.9706 42 44 37.9706 44 33C44 28.0294 39.9706 24 35 24L34.9552 24.0002C34.9848 23.6708 35 23.3372 35 23Z" fill="#B8CEDC"/>
+                                <path d="M34.9552 24.0002C34.97 24 34.985 24 35 24C39.9706 24 44 28.0294 44 33C44 37.9706 39.9706 42 35 42H14C8.47716 42 4 37.5228 4 32C4 26.8006 7.96796 22.5282 13.0408 22.0454M34.9552 24.0002C34.9848 23.6708 35 23.3372 35 23C35 16.9249 30.0752 12 24 12C18.2465 12 13.5247 16.4172 13.0408 22.0454M34.9552 24.0002C34.7506 26.269 33.8572 28.3392 32.4856 30M13.0408 22.0454C13.3565 22.0154 13.6765 22 14 22C16.2516 22 18.3295 22.7442 20.001 24" stroke="#B8CEDC" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M5.91878 20.3874C4.4373 14.9436 7.71844 9.34794 13.2474 7.88926M5.91878 20.3874L4 20.8936M5.91878 20.3874C6.28718 21.7412 6.9154 22.958 7.73646 24M13.2474 7.88926L12.7333 6M13.2474 7.88926C17.3335 6.81126 21.5036 8.29438 24 11.3392M6.953 12.6459L4.9288 11.4926M22.2814 6.9145L21.114 8.90988" stroke="#B8CEDC" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                                <p>Manhã</p>
+                        </div>
+                        <div id="afternoon">
+                            <div id="rounded-circle">
+                                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.87754 1.02038C10.1425 1.50493 9.96454 2.11257 9.47998 2.37756C8.10863 3.12752 6.82076 4.69753 5.83744 6.20323C5.35808 6.93725 4.97349 7.62066 4.70899 8.12036C4.577 8.36972 4.47558 8.57205 4.40788 8.7105C4.37404 8.77969 4.34867 8.83283 4.33216 8.8678L4.3141 8.90633L4.31015 8.91485L4.30965 8.91595C4.15515 9.25365 3.82609 9.4782 3.45528 9.49867C3.08436 9.51914 2.73266 9.33231 2.54197 9.0135C2.23126 8.49403 1.73753 8.01982 1.27997 7.65807C1.05765 7.4823 0.85753 7.34372 0.714718 7.25017C0.643589 7.20358 0.587438 7.16865 0.550786 7.14636C0.53248 7.13522 0.519105 7.12728 0.511229 7.12265L0.504429 7.11866C0.0249384 6.84496 -0.142031 6.23442 0.131511 5.75478C0.405118 5.27503 1.01583 5.10792 1.49558 5.38153L1.00017 6.25019C1.49558 5.38153 1.49539 5.38142 1.49558 5.38153L1.49729 5.3825L1.49959 5.38382L1.50594 5.38749L1.52544 5.39888C1.5414 5.40827 1.56318 5.42123 1.59018 5.43766C1.64416 5.47049 1.71925 5.5173 1.81063 5.57716C1.99281 5.6965 2.2427 5.86964 2.52037 6.08918C2.73257 6.25696 2.96985 6.45869 3.20939 6.69111C3.46624 6.22973 3.78717 5.68499 4.1629 5.10965C5.17959 3.55285 6.69171 1.62286 8.52036 0.622817C9.00492 0.357824 9.61255 0.535817 9.87754 1.02038Z" fill="#FFFFFF"/>
+                                    </svg>
+                            </div>
+                            <input type="radio" name="part-time" value="tarde" hidden>
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path opacity="0.4" d="M34 24C34 29.5228 29.5228 34 24 34C18.4772 34 14 29.5228 14 24C14 18.4772 18.4772 14 24 14C29.5228 14 34 18.4772 34 24Z" fill="#FEDF6F"/>
+                                <path d="M34 24C34 29.5228 29.5228 34 24 34C18.4772 34 14 29.5228 14 24C14 18.4772 18.4772 14 24 14C29.5228 14 34 18.4772 34 24Z" stroke="#FEDF6F" stroke-width="3"/>
+                                <path d="M24 4C23.2454 4.66666 22.189 6.4 24 8M24 40C24.7546 40.6666 25.811 42.4 24 44M39 9.00542C37.937 8.93964 35.8506 9.44586 36.0084 11.9969M10.9915 35C11.0573 36.063 10.5511 38.1494 8 37.9916M10.0054 9C9.93958 10.064 10.4463 12.1526 13 11.9946M36 35.0052C37.063 34.943 39.1494 35.4216 38.9916 37.8336M44 24C43.3334 23.2454 41.6 22.189 40 24M8 23C7.33334 23.7546 5.6 24.811 4 23" stroke="#FEDF6F" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                                <p>Tarde</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="sports-options">
+                        <label>Em qual esporte você gostaria de inscrever seu filho?</label>
+                        <input type="number" placeholder="(11) 99999-9999">
                 </div>
             </div>
         </form>

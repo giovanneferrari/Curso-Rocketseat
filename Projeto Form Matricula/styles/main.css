@@ -90,6 +90,10 @@ main {
                 font: var( --text-lg);
                 color: var(--stroke-default);
             }
+
+            input {
+                display: none;
+            }
         }
 
         .child-birth-document-box:hover {
@@ -123,7 +127,7 @@ main {
             color: var(--text-color-primary);
             }
 
-        .address-zip, .address-stress {
+        .address-zip {
             display: flex;
             flex-direction: column;
             gap: 4px;
@@ -147,9 +151,234 @@ main {
                 border: 1px solid var(--stroke-highlight);
                 box-shadow: 0 0 5px var(--stroke-highlight);
             }
+
+            #input-disabled {
+                background-color: var(--surface-color-disabled);
+                color: var(--text-color-tertiary);
+            }
+        }
+
+        .address-infos, .city-infos {
+            display: flex;
+            gap: 20px;
+
+            #address-street, #address-number, .city {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+
+                label {
+                    font: var(--text-md);
+                    color: var(--text-color-secondary);
+                }
+
+                input {
+                    background-color: var(--surface-color-primary);
+                    border: 1px solid var(--stroke-default);
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    font: var(--text-lg);
+                    color: var(--text-color-primary);
+                    outline: none;
+                    width: 100%;
+                }
+
+                input:focus {
+                    border: 1px solid var(--stroke-highlight);
+                    box-shadow: 0 0 5px var(--stroke-highlight);
+                }
+
+                #input-disabled {
+                    background-color: var(--surface-color-disabled);
+                    color: var(--text-color-tertiary);
+                }
+            }
+        }
+    }
+
+    .parents-info {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    
+        h3 {
+            font: var(--text-lg-semi);
+            color: var(--text-color-primary);
+            }
+    
+        .parents-name, .parents-number, .parents-email {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+    
+            label {
+                font: var(--text-md);
+                color: var(--text-color-secondary);
+            }
+            
+            p {
+                font: var(--text-md);
+                color: var(--text-color-tertiary);
+            }
+    
+            input {
+                background-color: var(--surface-color-primary);
+                border: 1px solid var(--stroke-default);
+                padding: 12px 16px;
+                border-radius: 8px;
+                font: var(--text-lg);
+                color: var(--text-color-primary);
+                outline: none;
+            }
+    
+            input:focus {
+                border: 1px solid var(--stroke-highlight);
+                box-shadow: 0 0 5px var(--stroke-highlight);
+            }
+    
+            #input-disabled {
+                background-color: var(--surface-color-disabled);
+                color: var(--text-color-tertiary);
+            }
+        }
+    
+        .address-infos, .city-infos {
+            display: flex;
+            gap: 20px;
+    
+            #address-street, #address-number, .city {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+    
+                label {
+                    font: var(--text-md);
+                    color: var(--text-color-secondary);
+                }
+    
+                input {
+                    background-color: var(--surface-color-primary);
+                    border: 1px solid var(--stroke-default);
+                    padding: 12px 16px;
+                    border-radius: 8px;
+                    font: var(--text-lg);
+                    color: var(--text-color-primary);
+                    outline: none;
+                    width: 100%;
+                }
+    
+                input:focus {
+                    border: 1px solid var(--stroke-highlight);
+                    box-shadow: 0 0 5px var(--stroke-highlight);
+                }
+    
+                #input-disabled {
+                    background-color: var(--surface-color-disabled);
+                    color: var(--text-color-tertiary);
+                }
+            }
+        }
+    }
+
+    .registration-options {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        h3 {
+            font: var(--text-lg-semi);
+            color: var(--text-color-primary);
+            }
+
+        .part-time-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            p {
+                font: var(--text-md);
+                color: var(--text-color-tertiary);
+            }
+
+            .part-time-selection {
+                display: flex;
+                gap: 16px;
+
+                #morning {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 12px;
+                    border-radius: 8px;
+                    border: 1px solid var(--stroke-highlight);
+                    cursor: pointer;
+
+                    p {
+                    font: var(--text-lg);
+                    color: var(--text-color-primary);
+                    }
+
+                    #rounded-circle-selected {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        align-self: flex-start;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        background-color: var(--stroke-highlight);
+                        padding: 2px;
+                    }
+                }
+
+                #afternoon {
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                    padding: 16px;
+                    border-radius: 8px;
+                    border: 1px solid var(--stroke-default);
+                    cursor: pointer;
+
+                    p {
+                        font: var(--text-lg);
+                        color: var(--text-color-primary);
+                    }
+
+                    #rounded-circle {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        align-self: flex-start;
+                        width: 22px;
+                        height: 22px;
+                        border-radius: 50%;
+                        border: 1px solid var(--stroke-default);
+                        padding: 2px;
+                    }
+                }
+            }
+        }
+
+        .sports-options {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            label {
+                font: var(--text-md);
+                color: var(--text-color-tertiary);
+            }
         }
     }
 }
+
 
 aside {
     width: 50%;
