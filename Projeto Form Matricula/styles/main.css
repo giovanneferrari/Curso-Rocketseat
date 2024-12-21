@@ -303,66 +303,6 @@ main {
             .part-time-selection {
                 display: flex;
                 gap: 16px;
-
-                #morning {
-                    display: flex;
-                    width: 100%;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 12px;
-                    border-radius: 8px;
-                    border: 1px solid var(--stroke-highlight);
-                    cursor: pointer;
-
-                    p {
-                    font: var(--text-lg);
-                    color: var(--text-color-primary);
-                    }
-
-                    #rounded-circle-selected {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        align-self: flex-start;
-                        width: 22px;
-                        height: 22px;
-                        border-radius: 50%;
-                        background-color: var(--stroke-highlight);
-                        padding: 2px;
-                    }
-                }
-
-                #afternoon {
-                    display: flex;
-                    width: 100%;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 8px;
-                    padding: 16px;
-                    border-radius: 8px;
-                    border: 1px solid var(--stroke-default);
-                    cursor: pointer;
-
-                    p {
-                        font: var(--text-lg);
-                        color: var(--text-color-primary);
-                    }
-
-                    #rounded-circle {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        align-self: flex-start;
-                        width: 22px;
-                        height: 22px;
-                        border-radius: 50%;
-                        border: 1px solid var(--stroke-default);
-                        padding: 2px;
-                    }
-                }
             }
         }
 
@@ -375,6 +315,53 @@ main {
                 font: var(--text-md);
                 color: var(--text-color-tertiary);
             }
+
+            .sports-selection {
+                display: flex;
+                gap: 16px;
+            }
+        }
+    }
+
+    #disclaimer {
+        gap: 12px;
+        font: var(--text-lg);
+        color: var(--text-color-secondary);
+
+        #disclaimer-checkbox {
+            margin-top: 5px;
+        }
+
+        a {
+            color: var(--brand-color-mid);
+            text-decoration: none;
+            font: var(--text-lg-semi);
+        }
+    }
+
+    .buttons {
+        justify-content: end;
+        text-align: center;
+        gap: 16px;
+
+        #save {
+            font: var(--text-lg-semi);
+            padding: 12px 24px;
+            color: var(--text-color-highlight);
+            border-radius: 8px;
+            background-color: white;
+            border: 1px solid var(--stroke-highlight);
+            cursor: pointer;
+        }
+
+        #register {
+            font: var(--text-lg-semi);
+            padding: 12px 24px;
+            color: white;
+            border-radius: 8px;
+            background-color: var(--brand-color-dark);
+            border: none;
+            cursor: pointer;
         }
     }
 }

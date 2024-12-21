@@ -13,3 +13,73 @@
 .gap-48 {
     gap: 48px;
 }
+
+.width-120 {
+    width: 112px;
+}
+
+.width-100pc {
+    width: 100%;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.rounded-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid var(--stroke-default);
+    padding: 2px;
+}
+
+.rounded-circle-selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--stroke-highlight);
+    padding: 2px;
+}
+
+.selected {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid var(--stroke-highlight);
+    cursor: pointer;
+
+    p {
+    font: var(--text-lg);
+    color: var(--text-color-primary);
+    }
+}
+
+.unselected {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--stroke-default);
+    cursor: pointer;
+
+    p {
+        font: var(--text-lg);
+        color: var(--text-color-primary);
+    }
+}
