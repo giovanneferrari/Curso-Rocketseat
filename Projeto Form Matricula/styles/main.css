@@ -1,10 +1,15 @@
 .container {
     width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
 }
 
 main {
-    width: 50%;
+    width: 52%;
     background-color: var(--surface-color-primary);
+    overflow: auto;
 
     .title {
         display: flex;
@@ -70,7 +75,7 @@ main {
                 outline: none;
             }
 
-            .child-age-box:focus, .child-name-box:focus, #medical-info:focus {
+            input:focus, textarea:focus, select:focus {
                 border: 1px solid var(--stroke-highlight);
                 box-shadow: 0 0 5px var(--stroke-highlight);
             }
@@ -114,6 +119,16 @@ main {
                 transition: all 0.3s ease-in-out;
             }
 
+        }
+
+        select {
+            background-color: var(--surface-color-primary);
+            border: 1px solid var(--stroke-default);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            font: var(--text-lg);
+            color: var(--text-color-primary);
+            outline: none;
         }
     }
 
@@ -362,40 +377,6 @@ main {
             background-color: var(--brand-color-dark);
             border: none;
             cursor: pointer;
-        }
-    }
-}
-
-
-aside {
-    width: 50%;
-    background-color: var(--surface-color-secondary);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    position: fixed;
-    right: 0;
-
-    div {
-        gap: 8px;
-        flex-direction: column;
-
-        img {
-            width: 203px;
-        }
-
-        h1 {
-            font: var(--h0);
-
-            span {
-                color: var(--text-color-highlight);
-            }
-        }
-
-        p {
-            font: var(--text-lg);
-            color: var(--text-color-secondary);
         }
     }
 }

@@ -7,7 +7,15 @@
 }
 
 .padding-64 {
-    padding: 64px;
+    padding: 4rem;
+}
+
+.max-width-44 {
+    max-width: 44rem;
+}
+
+.max-width-40 {
+    max-width: 40rem;
 }
 
 .gap-48 {

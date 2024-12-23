@@ -1,0 +1,30 @@
+aside {
+    width: 48%;
+    background-color: var(--surface-color-secondary);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    div {
+        gap: 8px;
+        flex-direction: column;
+
+        img {
+            width: 203px;
+        }
+
+        h1 {
+            font: var(--h0);
+
+            span {
+                color: var(--text-color-highlight);
+            }
+        }
+
+        p {
+            font: var(--text-lg);
+            color: var(--text-color-secondary);
+        }
+    }
+}
