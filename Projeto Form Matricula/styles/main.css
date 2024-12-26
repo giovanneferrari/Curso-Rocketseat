@@ -413,14 +413,71 @@ main {
 
             .part-time-selection {
                 display: grid;
-                grid-template-columns: repeat(auto-fit, min-max(7.5rem, 1fr));
-                gap: 16px;
+                grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
+                gap: 1rem;
                 position: relative;
 
-                input, input:focus, input:hover {
+                .box-selection {
+                    border-radius: 0.5rem;
+                    border: 1px solid var(--stroke-default);
+
+                    display: grid;
+                    justify-items: center;
+                    gap: 0.5rem;
+
+                    padding: 2rem 0.5rem 0.5rem;
+                    position: relative;
+
+                    cursor: pointer;
+
+                
+                    p {
+                        font: var(--text-lg);
+                        color: var(--text-color-primary);
+                    }
+
+                    .rounded-circle {
+                        position: absolute;
+                        top: 0.5rem;
+                        left: 0.5rem;
+                    }
+
+                    #checked {
+                        position: absolute;
+                        top: 0.5rem;
+                        left: 0.5rem;
+                        transform: translate(50%, 50%);
+                    }
+                }
+
+                .box-selection input, 
+                .box-selection input:focus, 
+                .box-selection input:hover {
                     all: unset;
-                    inset: 0;
                     position: absolute;
+                    inset: 0;
+                }
+            }
+
+            .box-selection:hover, .box-selection:focus-within {
+                border: 1px solid var(--stroke-highlight);
+
+                .rounded-circle {
+                    border: 1px solid var(--stroke-highlight);
+                }
+            }
+
+            .box-selection:has(:checked) {
+                border: 2px solid var(--stroke-highlight);
+
+                .rounded-circle {
+                    background-color: var(--stroke-highlight);
+                }
+
+                #checked {
+                    path {
+                        fill: var(--surface-color-disabled);
+                    }
                 }
             }
         }
@@ -436,8 +493,32 @@ main {
             }
 
             .sports-selection {
-                display: flex;
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
                 gap: 16px;
+
+                p {
+                    font: var(--text-md);
+                    color: var(--text-color-tertiary);
+                }
+
+                .box-selection {
+                    display: grid;
+                    justify-items: center;
+                    gap: 8px;
+                    padding: 16px;
+                    border-radius: 0.5rem;
+                    border: 1px solid var(--stroke-default);
+                
+                    p {
+                        font: var(--text-lg);
+                        color: var(--text-color-primary);
+                    }
+                }
+
+                .box-selection:hover {
+                    border: 1px solid var(--stroke-highlight);
+                }
             }
         }
     }
