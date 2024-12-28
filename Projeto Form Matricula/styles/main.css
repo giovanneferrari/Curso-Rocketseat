@@ -64,10 +64,6 @@ main {
                 font: var(--text-md);
                 color: var(--text-color-secondary);
             }
-
-            input, select {
-                cursor: pointer;
-            }
         }
 
         .child-birth-document {
@@ -495,36 +491,114 @@ main {
             .sports-selection {
                 display: grid;
                 grid-template-columns: repeat(auto-fit, minmax(7.5rem, 1fr));
-                gap: 16px;
-
-                p {
-                    font: var(--text-md);
-                    color: var(--text-color-tertiary);
-                }
+                gap: 1rem;
+                position: relative;
 
                 .box-selection {
-                    display: grid;
-                    justify-items: center;
-                    gap: 8px;
-                    padding: 16px;
                     border-radius: 0.5rem;
                     border: 1px solid var(--stroke-default);
+
+                    display: grid;
+                    justify-items: center;
+                    gap: 0.5rem;
+
+                    padding: 2rem 0.5rem 0.5rem;
+                    position: relative;
+
+                    cursor: pointer;
+
                 
                     p {
                         font: var(--text-lg);
                         color: var(--text-color-primary);
                     }
+
+                    .rounded-circle {
+                        position: absolute;
+                        top: 0.5rem;
+                        left: 0.5rem;
+                    }
+
+                    #checked {
+                        position: absolute;
+                        top: 0.5rem;
+                        left: 0.5rem;
+                        transform: translate(50%, 50%);
+                    }
                 }
 
-                .box-selection:hover {
+                .box-selection input, 
+                .box-selection input:focus, 
+                .box-selection input:hover {
+                    all: unset;
+                    position: absolute;
+                    inset: 0;
+                }
+            }
+
+            .box-selection:hover, .box-selection:focus-within {
+                border: 1px solid var(--stroke-highlight);
+
+                .rounded-circle {
                     border: 1px solid var(--stroke-highlight);
+                }
+            }
+
+            .box-selection:has(:checked) {
+                border: 2px solid var(--stroke-highlight);
+
+                .rounded-circle {
+                    background-color: var(--stroke-highlight);
+                }
+
+                #checked {
+                    path {
+                        fill: var(--surface-color-disabled);
+                    }
                 }
             }
         }
     }
 
+    .checkbox-wrapper {
+        position: relative;
+
+        & [type="checkbox"] {
+            all: unset;
+            position: absolute;
+            width: 19px;
+            height: 19px;
+        }
+    }
+
+    .checkbox-image {
+        position: relative;
+        content: "";
+        width: 19px;
+        height: 19px;
+        border: 1.5px solid var(--stroke-default);
+        border-radius: 5px;
+        padding: 5px;
+
+        svg {
+            transform: translate(-10%, -20%);
+        }
+    }
+
+    .checkbox-wrapper:hover, .checkbox-wrapper:focus {
+        .checkbox-image {
+        border: 1.5px solid var(--stroke-highlight);
+        }
+    }
+
+    .checkbox-wrapper:has(:checked) {
+        .checkbox-image {
+        background-color: var(--stroke-highlight);
+        }
+    }
+
     #disclaimer {
-        gap: 12px;
+        gap: 0.75rem;
         font: var(--text-lg);
         color: var(--text-color-secondary);
 
@@ -562,6 +636,14 @@ main {
             background-color: var(--brand-color-dark);
             border: none;
             cursor: pointer;
+        }
+
+        #register:hover, #register:focus {
+            background-color: var(--brand-color-mid);
+        }
+
+        #save:hover, #register:focus {
+            outline: solid 0.25rem var(--surface-color-secondary);
         }
     }
 
