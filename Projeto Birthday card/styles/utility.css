@@ -1,0 +1,11 @@
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.direction-column {
+    flex-direction: column;
+}

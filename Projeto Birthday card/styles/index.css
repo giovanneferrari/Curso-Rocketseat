@@ -1,0 +1,14 @@
+@import url(./global.css);
+@import url(./utility.css);
+@import url(./main.css);
+@import url(./aside.css);
+
+body {
+    gap: 20px;
+    font: var(--body-md);
+    background-color: var(--shape-background);
+    color: var(--text-body);
+    height: 100%;
+    width: 100%;
+    padding: 1.12rem;
+}

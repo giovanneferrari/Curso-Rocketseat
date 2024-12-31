@@ -1,0 +1,53 @@
+main {
+    width: 66%;
+    background-color: var(--shape-body);
+    border-radius: 0.66rem;
+    padding: 4.45rem 0;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font: var(--heading-md-bold);
+        color: var(--text-heading);
+        margin-bottom: 2.22rem;
+        width: 68%;
+    }
+
+    form {
+        width: 68%;
+        gap: 2.66rem;
+
+        .about-event {
+            gap: 1.33rem;
+            
+
+            .about-event-title {
+                gap: 0.66rem;
+                text-align: center;
+
+                p {
+                    font: var(--heading-sm-bold);
+                    color: var(--text-heading);
+                }
+            }
+
+            .about-event-name {
+                gap: 0.66rem;
+
+                label {
+                    font: var(--body-sm);
+                    color: var(--text-body);
+                }
+
+                input {
+                    padding: 0.72rem 0.88rem;
+                    border-radius: 0.44rem;
+                    border: 1px solid var(--input-stroke);
+                    background-color: var(--input-base);
+                    font: var(--body-md);
+                    color: var(--text-heading);
+                }
+            }
+        }
+    }
+}
