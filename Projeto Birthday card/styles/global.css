@@ -46,6 +46,7 @@
     --heading-sm-bold: bold 1rem var(--font-heading);
     --body-md: 0.88rem var(--font-body);
     --body-md-light: 300 0.88rem var(--font-body);
+    --body-sm-semibold: 600 0.75rem var(--font-body);
     --body-sm: 0.75rem var(--font-body);
     --body-xs: 0.66rem var(--font-body);
 }
