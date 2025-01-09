@@ -19,7 +19,6 @@ main {
 
         .about-event {
             gap: 1.33rem;
-            
 
             .about-event-title {
                 gap: 0.66rem;
@@ -703,10 +702,16 @@ main {
                     background-color: var(--input-base);
                     outline: 2px solid var(--input-stroke);
                     border-radius: 2rem;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+
 
                     .personalization-style-option-dark {
                         width: 50%;
-                        position: relative;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
                         background-color: var(--input-base);
                         padding: 0.22rem;
                         border-radius: 2rem;
@@ -714,11 +719,13 @@ main {
                         align-items: center;
                         justify-content: center;
 
+                            
                         input {
                             opacity: 0;
                             width: 100%;
                             height: 100%;
                             position: absolute;
+                            left: 0;   
                         }
                     }
 
@@ -729,7 +736,9 @@ main {
 
                     .personalization-style-option-light {
                         width: 50%;
-                        position: relative;
+                        height: 100%;
+                        position: absolute;
+                        right: 0;               
                         background-color: var(--input-base);
                         padding: 0.22rem;
                         border-radius: 2rem;
@@ -737,11 +746,13 @@ main {
                         align-items: center;
                         justify-content: center;
 
+                                                    
                         input {
                             opacity: 0;
                             width: 100%;
                             height: 100%;
                             position: absolute;
+                            left: 0;   
                         }
                     }
                     
@@ -750,8 +761,9 @@ main {
                         transition: background-color 0.3s;
                     }
 
-                    .personalization-style-option:has(:checked) {
-                        border: 0.16rem solid yellow;
+                    .personalization-style-option-light:has(:checked) ~ .personalization-style-option {
+                        background-color: green;
+                        transition: background-color 0.3s;
                     }
                 }
             }
@@ -802,6 +814,14 @@ main {
                     gap: 0.44rem;
                     padding: 0.66rem 0.22rem;
                 }
+
+                .personalization-cover-upload-text:hover {
+                    background-color: var(--brand-light);
+
+                    svg > path {
+                        fill: var(--text-heading);
+                    }
+                }
             }   
         }
     } 
@@ -841,6 +861,18 @@ main {
                     color: var(--text-heading);
                 }
 
+                input:focus:empty ~ .error {
+                    display: flex;
+                }
+
+                .error {
+                    display: none;
+                    gap: 0.44rem;
+                    align-items: center;
+                    font: var(--body-xs);
+                    color: var(--feedback-danger);
+                }
+
                 .about-event-email {
                     gap: 0.66rem;
                     width: 100%;
@@ -866,6 +898,130 @@ main {
                     border: 1px solid var(--input-stroke);
                     background-color: var(--input-base);
                     font: var(--body-md);
+                    color: var(--text-heading);
+                }
+            }
+        }
+    }
+
+    .contact-infos::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        margin-top: 0.88rem;
+        background-color: var(--input-stroke);
+    }
+
+    .checkbox-terms {
+        margin-top: 2.66rem;
+        gap: 0.66rem;
+        position: relative;
+
+        .checkbox-terms-box {
+            width: 1.11rem;
+            height: 1.11rem;
+            background-color: var(--input-base);
+            stroke: 1px solid var(--input-stroke);
+            border-radius: 0.22rem;
+        }
+
+        .checkbox-terms-box:has(:checked) {
+            border: 1px solid var(--brand-light);
+            transition: border 0.3s;
+
+            svg > path {
+                fill: var(--brand-light);
+            }
+        }
+
+        input {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        p {
+            font: var(--body-sm);
+            color: var(--text-body);
+
+            a {
+                text-decoration: none;
+                color: var(--brand-light);
+                font: var(--body-sm-semibold);
+            }
+        }
+    }
+
+    .checkbox-email, .checkbox-sms {
+        margin-top: 0.44rem;
+        gap: 0.66rem;
+        position: relative;
+
+        .checkbox-terms-box {
+            width: 1.11rem;
+            height: 1.11rem;
+            background-color: var(--input-base);
+            stroke: 1px solid var(--input-stroke);
+            border-radius: 0.22rem;
+        }
+
+        .checkbox-terms-box:has(:checked) {
+            border: 1px solid var(--brand-light);
+            transition: border 0.3s;
+
+            svg > path {
+                fill: var(--brand-light);
+            }
+        }
+
+        input {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+
+        p {
+            font: var(--body-sm);
+            color: var(--text-body);
+
+            a {
+                text-decoration: none;
+                color: var(--brand-light);
+                font: var(--body-sm-semibold);
+            }
+        }
+    }
+
+
+    .button-container {
+        justify-content: flex-end;
+
+        button {
+            margin-top: 2.66rem;
+            height: 2.66rem;
+
+            background-color: var(--brand-dark);
+            border: none;
+
+            padding: 0.22rem 1.11rem;
+            border-radius: 0.44rem;
+
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+
+            .button-container-infos {
+                justify-content: center;
+                align-items: center;
+
+                gap: 0.66rem;
+
+                p {
+                    font: var(--body-sm-semibold);
                     color: var(--text-heading);
                 }
             }

@@ -12,3 +12,11 @@ body {
     width: 100%;
     padding: 1.12rem;
 }
+
+input:focus, textarea:focus {
+    outline: 1pt solid var(--brand-light);
+}
+
+input::-webkit-calendar-picker-indicator {
+    opacity: 0;
+}
