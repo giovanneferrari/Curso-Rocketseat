@@ -1,0 +1,110 @@
+@media (max-width: 440px) {
+
+    body {
+        background-color: var(--background-color);
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.6rem;
+        background-color: var(--surface-color);
+
+        #search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1.6rem;
+
+            a:nth-child(2), a:nth-child(3) {
+                display: none;
+            }
+
+            svg {
+                width: 2.4rem;
+            }
+
+            svg:hover {
+                cursor: pointer;
+                path {
+                    fill: var(--brand-color);
+                }
+            }
+
+            img {
+                width: 4rem;
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-color: var(--surface-color);
+
+        gap: 3.2rem;
+        padding: 3.2rem;
+
+        #container-about-me {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 1.6rem;
+
+            img {
+                width: 12rem;
+                border-radius: 50%;
+            }
+
+            #about-me {
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+            }
+        }
+
+        #more-infos {
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            width: 28rem;
+
+            #location, #travel, #total-pictures {
+                display: flex;
+                align-items: center;
+                gap: .8rem;
+            }
+        }
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1.6rem;
+        gap: 1.6rem;
+
+        img {
+            width: 32.8rem;
+        }
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+        padding: 1.6rem;
+
+        #links {
+            display: flex;
+            gap: 1.6rem;
+            align-items: center;
+        }
+    }
+}
